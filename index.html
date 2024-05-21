@@ -26,6 +26,11 @@
             text-align: center;
         }
 
+        #container{
+            width: 100%;
+            height: 700px
+        }
+
         label:after {
             content: '+';
             position: absolute;
@@ -94,10 +99,10 @@
 </nav>
 
 <div id="hero" class="w-full container m-auto lg:py-2 md:py-6">
-    <div class="flex flex-wrap justify-center mt-8 items-center">
-        <div class="w-full md:w-full lg:w-1/2 p-4 md:text-center lg:text-start">
-            <h1 class="text-4xl font-bold"><span class="text-8xl">🦸🏻‍♀️ </span>Hi! I'm Mahri Ilmedova</h1><br/>
-            <h1 class="text-2xl font-bold text-emerald-400 space-y-4">
+    <div class="flex flex-wrap justify-center items-center">
+        <div class="w-full md:w-full lg:w-1/2 p-4 md:text-center lg:text-start lg:mt-0 mt-4">
+            <h1 class="lg:text-4xl font-bold sm:text-2xl text-2xl"><span class="lg:text-8xl md:text-4xl">🦸🏻‍♀️ </span>Hi! I'm Mahri Ilmedova</h1><br/>
+            <h1 class="lg:text-2xl font-bold text-emerald-400 space-y-4 sm:text-xl text-xl">
                 🤓 Welcoming Hero and Software Engineer <br/><br/>
                 🤌🏻 Code Maestro and Bug killer <br/><br/>
                 🔥 Energetic Collaborator and Github's Rockstar!  <br/><br/>
@@ -107,7 +112,9 @@
                 Download resume
             </a>
         </div>
-        <div id="container" class="relative w-full md:w-full lg:w-1/2 p-4 sm:mt-12"></div>
+        <div class="relative w-full md:w-full lg:w-1/2 sm:p-4 sm:mt-12">
+            <div id="container"></div>
+        </div>
     </div>
 </div>
 
@@ -416,17 +423,11 @@
     const scene = new THREE.Scene();
     const dotScene = new THREE.Scene(); // Separate scene for dots
 
-    const camera = new THREE.PerspectiveCamera(40, 600 / 600, 1, 10000);
+    const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 1, 10000);
     camera.position.z = 3000;
 
     const cssRenderer = new CSS3DRenderer();
-    let isMobile = window. matchMedia("only screen and (max-width: 600px)")
-    if(isMobile){
-        cssRenderer.setSize(500, 450);
-    }
-    else{
-        cssRenderer.setSize(700, 650);
-    }
+    cssRenderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(cssRenderer.domElement);
 
     const webglRenderer = new THREE.WebGLRenderer({ alpha: true });
@@ -441,7 +442,7 @@
 
     const labels = ['HTML', 'Pandas', 'Numpy', 'CSS', 'JavaScript', 'Java', 'AWS', 'Git', 'Linux', 'SQL', 'LangChain', 'PHP', 'SQL', 'Flask', 'Laravel', 'Python', 'Tailwind', 'Bootstrap', 'ThreeJS', 'ReactJS'];
 
-    const radius = 1000;
+    let radius = Math.min(container.clientWidth, container.clientHeight) / 1; // Adjust radius based on container size
 
     const labelObjects = [];
 
@@ -500,10 +501,27 @@
     }
 
     window.addEventListener('resize', () => {
-        camera.aspect = container.clientWidth / container.clientHeight;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        camera.aspect = width / height;
         camera.updateProjectionMatrix();
-        cssRenderer.setSize(container.clientWidth, container.clientHeight);
-        webglRenderer.setSize(container.clientWidth, container.clientHeight);
+
+        cssRenderer.setSize(width, height);
+        webglRenderer.setSize(width, height);
+
+        radius = Math.min(width, height) / 3; // Recalculate radius based on new container size
+
+        // Update label positions
+        for (let i = 0; i < labels.length; i++) {
+            const object = labelObjects[i];
+            const phi = Math.acos(-1 + (2 * i) / labels.length);
+            const theta = Math.sqrt(labels.length * Math.PI) * phi;
+
+            object.position.x = radius * Math.cos(theta) * Math.sin(phi);
+            object.position.y = radius * Math.sin(theta) * Math.sin(phi);
+            object.position.z = radius * Math.cos(phi);
+        }
     });
 
     animate();
