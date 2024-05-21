@@ -32,6 +32,10 @@
             z-index: -1
         }
 
+        canvas{
+            z-index: -1
+        }
+
         label:after {
             content: '+';
             position: absolute;
@@ -511,7 +515,7 @@
         cssRenderer.setSize(width, height);
         webglRenderer.setSize(width, height);
 
-        radius = Math.min(width, height) / 3; // Recalculate radius based on new container size
+        radius = Math.min(width, height) / 1; // Recalculate radius based on new container size
 
         // Update label positions
         for (let i = 0; i < labels.length; i++) {
