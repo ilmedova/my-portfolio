@@ -7,27 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Developer devoted to creating great web experiences focused on React, NextJS and Flutter based in Bangladesh, meet Tamal Sen">
     <title>Mahri Ilmedova - Portfolio</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX0KDB05JN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QX0KDB05JN');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .highlight-software { @apply underline decoration-pink-500; }
-        .highlight-frontend { @apply underline decoration-blue-500; }
-        .highlight-flutter { @apply underline decoration-orange-500; }
         .label {
             color: #34d399;
             font-size: 50px;
             font-weight: bold;
             text-align: center;
         }
-        #hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 100%;
-            min-height: 100vh;
-            padding: 2rem;
-        }
 
-        .bg-grey-400 { background-color: #c4c7cf; }
         label:after {
             content: '+';
             position: absolute;
@@ -54,58 +51,72 @@
 </head>
 <body class="bg-neutral-900 text-white">
 
-<nav class="bg-neutral-800 p-3 font-mono font-semibold flex text-xl justify-around pt-6">
-    <div>
-        <a href="#hero" class="text-emerald-400">👋🏻 Welcoming Hero</a>
-    </div>
-    <div>
-        <a href="#my_work" class="text-emerald-400">🤌🏻 Code Maestro </a>
-    </div>
-    <div class="block align-middle">
-        <a href="#my_opensource" class="text-emerald-400">🚀 Github Rockstar!</a>
-    </div>
-    <div class="block align-middle flex">
-        <a href="https://github.com/ilmedova" class="text-emerald-400">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+<nav class="bg-neutral-800 p-3 font-mono font-semibold text-xl flex flex-wrap items-center justify-between">
+    <div class="flex items-center justify-between w-full md:w-auto md:hidden lg:hidden">
+        <div class="text-emerald-400">
+            <span class="text-2xl">Hello World! </span>
+        </div>
+        <button id="menu-toggle" class="block md:hidden lg:hidden text-emerald-400 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
             </svg>
-        </a>
-        <a href="https://linkedin.com/in/mahri-ilmedova" class="text-emerald-400 ml-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-            </svg>
-        </a>
-        <a href="mailto:ilmedovamahri2@gmail.com" class="text-emerald-400 ml-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-            </svg>
-        </a>
+        </button>
+    </div>
+    <div id="menu" class="w-full md:flex md:items-center md:justify-around hidden">
+        <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2">
+            <a href="#hero" class="block text-emerald-400 md:inline-block md:mx-2">👋🏻 Welcoming Hero</a>
+        </div>
+        <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2">
+            <a href="#my_work" class="block text-emerald-400 md:inline-block md:mx-2">🤌🏻 Code Maestro</a>
+        </div>
+        <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2">
+            <a href="#my_opensource" class="block text-emerald-400 md:inline-block md:mx-2">🚀 Github Rockstar!</a>
+        </div>
+        <div class="flex justify-center md:justify-start sm:py-2 xs:py-2">
+            <a href="https://github.com/ilmedova" class="text-emerald-400 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/mahri-ilmedova" class="text-emerald-400 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+            </a>
+            <a href="mailto:ilmedovamahri2@gmail.com" class="text-emerald-400 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                </svg>
+            </a>
+        </div>
     </div>
 </nav>
 
-<div id="hero">
-    <div class="flex flex-col items-start space-y-7">
-        <h1 class="text-4xl font-bold"><span class="text-8xl">🦸🏻‍♀️ </span>Hi! I'm Mahri Ilmedova</h1><br/>
-        <h1 class="text-2xl font-bold text-emerald-400 space-y-4">
-            🤓 Welcoming Hero and Software Engineer <br/><br/>
-            🤌🏻 Code Maesto and Bug killer <br/><br/>
-            🔥 Energetic Collaborator and Github's Rockstar!  <br/><br/>
-            🤖 AI and Machine Learning Enthusiast
-        </h1><br/>
-        <a class="p-2 px-4 bg-emerald-500 text-white rounded text-xl font-semibold" href="./resume_mahri_ilmedova.pdf" target="_blank">
-            Download resume
-        </a>
+<div id="hero" class="w-full container m-auto lg:py-24 md:py-6">
+    <div class="flex flex-wrap justify-center mt-8">
+        <div class="w-full md:w-full lg:w-1/2 p-4 md:text-center lg:text-start">
+            <h1 class="text-4xl font-bold"><span class="text-8xl">🦸🏻‍♀️ </span>Hi! I'm Mahri Ilmedova</h1><br/>
+            <h1 class="text-2xl font-bold text-emerald-400 space-y-4">
+                🤓 Welcoming Hero and Software Engineer <br/><br/>
+                🤌🏻 Code Maesto and Bug killer <br/><br/>
+                🔥 Energetic Collaborator and Github's Rockstar!  <br/><br/>
+                🤖 AI and Machine Learning Enthusiast
+            </h1><br/>
+            <a class="p-2 px-4 bg-emerald-500 text-white rounded text-xl font-semibold" href="./resume_mahri_ilmedova.pdf" target="_blank">
+                Download resume
+            </a>
+        </div>
+        <div id="container" class="relative w-full md:w-full lg:w-1/2 p-4 md:mt-12 lg:mt-1"></div>
     </div>
-    <div id="container" class="relative"></div>
 </div>
 
-<div id="my_work" class="container mx-auto py-16">
-    <h1 class="text-4xl font-bold text-center mb-12">👩🏻‍💻 Professional Experience</h1>
-    <h1 class="text-2xl font-bold text-end mb-12 text-red-400">Click on [+] 👇🏻 to read in detail </h1>
+<div id="my_work" class="container mx-auto py-8 px-4 md:py-16">
+    <h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-12">👩🏻‍💻 Professional Experience</h1>
+    <h1 class="text-xl md:text-2xl font-bold text-center md:text-end mb-6 md:mb-12 text-red-400">Click on [+] 👇🏻 to read in detail</h1>
 
-    <div class="accordion flex flex-col items-center justify-center text-xl">
-        <!--  Panel 1  -->
-        <div class="w-3/4">
+    <div class="accordion flex flex-col items-center justify-center text-base md:text-xl">
+        <!-- Panel 1 -->
+        <div class="w-full md:w-3/4">
             <input type="checkbox" name="panel" id="panel-1" class="hidden">
             <label for="panel-1" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Senior Software Engineer <a class="text-blue-500" href="https://ogd-solutions.com/">@ OGD Solutions</a></label>
             <div class="accordion__content overflow-hidden text-white bg-neutral-800 border-b border-neutral-700">
@@ -113,262 +124,278 @@
                     Feb 2023 - Aug 2023 | Tallin, Estonia (Remote)
                 </h2>
                 <p class="accordion__body p-2" id="panel1">
-                    <ul class="pb-4 px-6">
-                        <li>
-                            • Maintained complex technology infrastructure and collaborated with cross-functional teams to
-                            implement new features and strategically plan for future products, leading to streamlined workflows and
-                            a 20% improvement in development efficiency.
-                        </li>
-                        <li>
-                            • Implemented Agile methodologies in building and delivering a scalable dating platform with real-time
-                            chat system, serving 1 million users, using PHP and Web Sockets.
-                        </li>
-                        <li>
-                            • Crafted and deployed an AI chatbot using Python, TensorFlow and Hugginface Transformer
-                            conversational models increasing user engagement by 85%.
-                        </li>
-                        <li>
-                            • Created advanced queries to visualize important data for the data analysis team, achieving profit
-                            increase by 54% from the visualized insights.
-                        </li>
-                    </ul>
-                    <div class="pb-4 px-6 flex">
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Pandas</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">LangChain</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
-                    </div>
+                <ul class="pb-4 px-6">
+                    <li>
+                        • Maintained complex technology infrastructure and collaborated with cross-functional teams to
+                        implement new features and strategically plan for future products, leading to streamlined workflows and
+                        a 20% improvement in development efficiency.
+                    </li>
+                    <li>
+                        • Implemented Agile methodologies in building and delivering a scalable dating platform with real-time
+                        chat system, serving 1 million users, using PHP and Web Sockets.
+                    </li>
+                    <li>
+                        • Crafted and deployed an AI chatbot using Python, TensorFlow and Hugginface Transformer
+                        conversational models increasing user engagement by 85%.
+                    </li>
+                    <li>
+                        • Created advanced queries to visualize important data for the data analysis team, achieving profit
+                        increase by 54% from the visualized insights.
+                    </li>
+                </ul>
+                <div class="pb-4 px-6 flex flex-wrap">
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Pandas</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">LangChain</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
+                </div>
                 </p>
             </div>
         </div>
         <!-- Panel 2 -->
-        <div class="w-3/4">
+        <div class="w-full md:w-3/4 mt-4 md:mt-8">
             <input type="checkbox" name="panel" id="panel-2" class="hidden">
             <label for="panel-2" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Full Stack Software Engineer <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS Advertising Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800">
+            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Aug 2019 - Feb 2023 | Ashgabat, Turkmenistan (On-site)
                 </h2>
                 <p class="accordion__body p-2" id="panel2">
-                    <ul class="pb-4 px-6">
-                        <li>
-                            • Led the collaboration of cross-functional units in building enterprise web applications and
-                            microservices leveraging PHP (Laravel, Lumen) and Python (Flask, FastAPI) for e-commerce, CRM,
-                            ERP, and reduced time-to-market by 40%.
-                        </li>
-                        <li>
-                            • Constructed robust REST APIs using PHP and Python for more than 30+ projects and documenting
-                            using OpenAPI specifications.
-                        </li>
-                        <li>
-                            • Engineered a real-time SMS application in Python with Web Sockets for on-demand SMS services
-                            and secure user authentication.
-                        </li>
-                    </ul>
-                    <div class="pb-4 px-6 flex">
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
-                    </div>
+                <ul class="pb-4 px-6">
+                    <li>
+                        • Led the collaboration of cross-functional units in building enterprise web applications and
+                        microservices leveraging PHP (Laravel, Lumen) and Python (Flask, FastAPI) for e-commerce, CRM,
+                        ERP, and reduced time-to-market by 40%.
+                    </li>
+                    <li>
+                        • Constructed robust REST APIs using PHP and Python for more than 30+ projects and documenting
+                        using OpenAPI specifications.
+                    </li>
+                    <li>
+                        • Engineered a real-time SMS application in Python with Web Sockets for on-demand SMS services
+                        and secure user authentication.
+                    </li>
+                </ul>
+                <div class="pb-4 px-6 flex flex-wrap">
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
+                </div>
                 </p>
             </div>
         </div>
-        <!--  Panel 3  -->
-        <div class="w-3/4">
+        <!-- Panel 3 -->
+        <div class="w-full md:w-3/4 mt-4 md:mt-8">
             <input type="checkbox" name="panel" id="panel-3" class="hidden">
             <label for="panel-3" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Junior Full Stack Engineer - Intern <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS Advertising Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800">
+            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Apr 2018 - Aug 2019 | Ashgabat, Turkmenistan (On-site)
                 </h2>
                 <p class="accordion__body p-2" id="panel3">
-                    <ul class="pb-4 px-6">
-                        <li>
-                            • Automated data retrieval processes using Python, Selenium, and BeautifulSoup, streamlining the
-                            collection of product information and reviews in e-commerce app resulting in 100% of data accuracy.
-                        </li>
-                        <li>
-                            • Spearheaded the successful design and implementation of scalable e-commerce solutions
-                            incorporating PHP and Laravel framework, enhancing the website performance by 25%.
-                        </li>
-                        <li>
-                            • Orchestrated successful migration of 3 legacy code to Laravel applications, delivered production-ready
-                            solutions that increased project completion rate by 30%.
-                        </li>
-                    </ul>
-                    <div class="pb-4 px-6 flex">
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                    </div>
+                <ul class="pb-4 px-6">
+                    <li>
+                        • Automated data retrieval processes using Python, Selenium, and BeautifulSoup, streamlining the
+                        collection of product information and reviews in e-commerce app resulting in 100% of data accuracy.
+                    </li>
+                    <li>
+                        • Spearheaded the successful design and implementation of scalable e-commerce solutions
+                        incorporating PHP and Laravel framework, enhancing the website performance by 25%.
+                    </li>
+                    <li>
+                        • Orchestrated successful migration of 3 legacy code to Laravel applications, delivered production-ready
+                        solutions that increased project completion rate by 30%.
+                    </li>
+                </ul>
+                <div class="pb-4 px-6 flex flex-wrap">
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
+                </div>
                 </p>
             </div>
         </div>
-        <!--  Panel 4  -->
-        <div class="w-3/4">
+        <!-- Panel 4 -->
+        <div class="w-full md:w-3/4 mt-4 md:mt-8">
             <input type="checkbox" name="panel" id="panel-4" class="hidden">
             <label for="panel-4" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Junior Full Stack Web Developer - Intern <a class="text-blue-500" href="https://www.instagram.com/idealhyzmat/">@ Ide-al Digital Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800">
+            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Sep 2017 - Apr 2018 | Ashgabat, Turkmenistan (On-site)
                 </h2>
                 <p class="accordion__body p-2" id="panel4">
-                    <ul class="pb-4 px-6">
-                        <li>
-                            • Collaborated with 2 engineering teams on domain, design and testing for 6+ projects.
-                        </li>
-                        <li>
-                            • Architected, developed and deployed high-performing e-commerce solutions with PHP and Laravel,
-                            achieving a 30% website performance increase and 20% user engagement improvement.
-                        </li>
-                        <li>
-                            • Successfully migrated 2 legacy applications from .NET to Laravel, enhancing flexibility, performance,
-                            and maintainability.
-                        </li>
-                    </ul>
-                    <div class="pb-4 px-6 flex">
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
-                        <div style="width: fit-content" class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                    </div>
+                <ul class="pb-4 px-6">
+                    <li>
+                        • Collaborated with 2 engineering teams on domain, design and testing for 6+ projects.
+                    </li>
+                    <li>
+                        • Architected, developed and deployed high-performing e-commerce solutions with PHP and Laravel,
+                        achieving a 30% website performance increase and 20% user engagement improvement.
+                    </li>
+                    <li>
+                        • Successfully migrated 2 legacy applications from .NET to Laravel, enhancing flexibility, performance,
+                        and maintainability.
+                    </li>
+                </ul>
+                <div class="pb-4 px-6 flex flex-wrap">
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
+                </div>
                 </p>
             </div>
         </div>
     </div>
-
 </div>
 
-<div id="my_opensource" class="container mx-auto py-32 pb-48" style="background: url('./bg.png') no-repeat; background-size: 70%; background-position: bottom">
-    <h1 class="text-4xl font-bold text-center mb-12">🚀 Welcome to my gallery of open-source projects</h1>
 
+<div id="my_opensource" class="container mx-auto py-16 px-4" style="background: url('./bg.png') no-repeat; background-size: 60%; background-position: bottom">
+    <h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-12">🚀 Welcome to my gallery of open-source projects</h1>
 
     <a href="https://github.com/ilmedova" target="_blank">
-        <img class="w-75 m-auto" src="https://github-widgetbox.vercel.app/api/profile?username=ilmedova&data=followers,repositories,stars,commits&theme=carbon">
+        <img class="w-full max-w-xs md:max-w-md m-auto" src="https://github-widgetbox.vercel.app/api/profile?username=ilmedova&data=followers,repositories,stars,commits&theme=carbon">
     </a>
 
+    <div class="flex flex-wrap justify-center mt-8">
 
-    <div class="lg:flex mb-4 m-10 rounded mx-auto">
-
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 relative flex flex-col bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/chattle" alt="Sunset in the mountains">
-            <div class="px-6 py-4 h-full">
-                <div class="font-bold text-xl mb-2">Chattle - php composer package for Laravel projects, to enable projects instant customer support chat system using WebSockets</div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/chattle" alt="Chattle Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">Chattle - php composer package for Laravel projects, to enable projects instant customer support chat system using WebSockets</div>
+                </div>
+                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
             </div>
-            <a href="https://github.com/ilmedova/chattle" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
         </div>
 
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/ml-fun" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Project contains a collection of Machine Learning and AI projects in computer vision, data science and etc (Academic project)</div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/ml-fun" alt="ML Fun Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">Project contains a collection of Machine Learning and AI projects in computer vision, data science, and more (Academic project)</div>
+                </div>
+                <a href="https://github.com/ilmedova/ml-fun" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
             </div>
-            <a href="https://github.com/ilmedova/ml-fun" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
         </div>
 
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/llama3_chatbot" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">An AI chatbot using Python, LangChain, LLMs, Llama3 model and Streamlit (Academic project)<br/><br/></div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/llama3_chatbot" alt="Llama3 Chatbot Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">An AI chatbot using Python, LangChain, LLMs, Llama3 model, and Streamlit (Academic project)</div>
+                </div>
+                <a href="https://github.com/ilmedova/llama3_chatbot" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
             </div>
-            <a href="https://github.com/ilmedova/llama3_chatbot" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
         </div>
 
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 relative flex flex-col bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/modem-sms-sender" alt="Sunset in the mountains">
-            <div class="px-6 py-4 h-full">
-                <div class="font-bold text-xl mb-2">Sending sms using modem by connecting to the websocket channels and listening for events</div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/modem-sms-sender" alt="Modem SMS Sender Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">Sending SMS using modem by connecting to the websocket channels and listening for events</div>
+                </div>
+                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
             </div>
-            <a href="https://github.com/ilmedova/chattle" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/langchain_projects" alt="LangChain Projects">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">LangChain, LLMs (OpenAI, LLama, Bert, Gemini) problems and interview questions</div>
+                </div>
+                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/docusaurus" alt="Docusaurus Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">This project was forked from Facebook. I implemented new features for the project to make my own contribution to open-source communities</div>
+                </div>
+                <a href="https://github.com/ilmedova/ml-fun" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/leetcode" alt="Leetcode Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">Collection of solutions that I implemented for Leetcode problems. Project doesn't contain all the problems solved</div>
+                </div>
+                <a href="https://github.com/ilmedova/llama3_chatbot" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
+                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/scraper" alt="Scraper Project">
+                <div class="px-6 py-4 flex-grow">
+                    <div class="font-bold text-lg md:text-xl mb-2">Basic scraping of the links from the webpage and saving them in csv file</div>
+                </div>
+                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                    <span class="text-lg md:text-xl">Go to repository →</span>
+                </a>
+            </div>
         </div>
 
     </div>
-
-    <div class="lg:flex mb-4 m-10 rounded mx-auto">
-
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 relative flex flex-col bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/langchain_projects" alt="Sunset in the mountains">
-            <div class="px-6 py-4 h-full">
-                <div class="font-bold text-xl mb-2">LangChain, LLMs (OpenAI, LLama, Bert, Gemini) problems and interview questions</div>
-            </div>
-            <a href="https://github.com/ilmedova/chattle" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
-        </div>
-
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/docusaurus" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">This project was forked from Facebook. I implemented new feature for the project to make my own contribution to open-source communities</div>
-            </div>
-            <a href="https://github.com/ilmedova/ml-fun" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
-        </div>
-
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/leetcode" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Collection of solutions that I implemented for Leetcode problems. Project doesn't contain all the problems solved<br/><br/></div>
-            </div>
-            <a href="https://github.com/ilmedova/llama3_chatbot" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
-        </div>
-
-        <div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 relative flex flex-col bg-neutral-800">
-            <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/scraper" alt="Sunset in the mountains">
-            <div class="px-6 py-4 h-full">
-                <div class="font-bold text-xl mb-2">Basic scraping of the links from the webpage and saving them in csv file<br/><br/></div>
-            </div>
-            <a href="https://github.com/ilmedova/chattle" class="w-full bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded inline-flex items-center">
-                <span class="text-xl">Go to repository --> </span>
-            </a>
-        </div>
-
-    </div>
-
 </div>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 <script type="importmap">
     {
@@ -460,7 +487,7 @@
         // Automatically rotate the scene
         scene.rotation.y += 0.0005; // Adjust the rotation speed as needed
 
-        controls.update();
+        //controls.update();
         cssRenderer.render(scene, camera);
         webglRenderer.render(dotScene, camera);
     }
