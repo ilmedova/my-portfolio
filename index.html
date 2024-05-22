@@ -5,16 +5,21 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJFWYGPVL5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-GJFWYGPVL5');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Developer devoted to creating great web experiences focused on React, NextJS and Flutter based in Bangladesh, meet Tamal Sen">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta content="Developer devoted to creating great web experiences focused on React, NextJS and Flutter based in Bangladesh, meet Tamal Sen"
+          name="description">
     <title>Mahri Ilmedova - Portfolio</title>
     <!-- Google tag (gtag.js) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,21 +31,21 @@
             text-align: center;
         }
 
-        #container{
+        #container {
             width: 100%;
             height: 700px;
             z-index: -1
         }
 
-        @media screen and (max-width: 600px){
-            #container{
+        @media screen and (max-width: 600px) {
+            #container {
                 width: 100%;
                 height: 500px;
                 z-index: -1
             }
         }
 
-        canvas{
+        canvas {
             z-index: -1
         }
 
@@ -48,7 +53,6 @@
             content: '+';
             position: absolute;
             right: 1em;
-            color: #fff;
         }
 
         input:checked + label:after {
@@ -57,79 +61,325 @@
         }
 
 
-        .accordion__content{
+        .accordion__content {
             max-height: 0em;
             transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
         }
+
         input[name='panel']:checked ~ .accordion__content {
             /* Get this as close to what height you expect */
             max-height: 50em;
         }
 
+        .skills {
+            width: 80%;
+            max-width: 960px;
+            margin: auto;
+            position: relative;
+        }
+
+        .skills {
+            width: 80%;
+            max-width: 960px;
+            margin: auto;
+            position: relative;
+        }
+
+        .skills span{
+            font-weight: bolder;
+        }
+
+        .charts {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .chart:not(:first-child) {
+            margin-top: 10px;
+        }
+
+        .chart__title {
+            display: block;
+            margin: 0 0 10px;
+            opacity: 0;
+            animation: 1s anim-lightspeed-in ease forwards;
+        }
+
+        .chart--prod .chart__title {
+            animation-delay: 3.3s;
+        }
+
+        .chart--design .chart__title {
+            animation-delay: 4.5s;
+        }
+
+        .chart--horiz {
+            overflow: hidden;
+        }
+
+        .chart__bar {
+            height: 30px;
+            margin-bottom: 10px;
+            background: #34d399;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            opacity: 0;
+            animation: 1s anim-lightspeed-in ease forwards;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(11) {
+            animation-delay: 2.7s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(10) {
+            animation-delay: 2.5s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(9) {
+            animation-delay: 2.3s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(8) {
+            animation-delay: 2.1s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(7) {
+            animation-delay: 1.9s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(6) {
+            animation-delay: 1.7s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(5) {
+            animation-delay: 1.5s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(4) {
+            animation-delay: 1.3s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(3) {
+            animation-delay: 1.1s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(2) {
+            animation-delay: 0.9s;
+        }
+
+        .chart--dev .chart__bar:nth-of-type(1) {
+            animation-delay: 0.7s;
+        }
+
+        .chart--prod .chart__bar:nth-of-type(2) {
+            animation-delay: 4.2s;
+        }
+
+        .chart--prod .chart__bar:nth-of-type(1) {
+            animation-delay: 4s;
+        }
+
+        .chart--design .chart__bar:nth-of-type(4) {
+            animation-delay: 5.8s;
+        }
+
+        .chart--design .chart__bar:nth-of-type(3) {
+            animation-delay: 5.6s;
+        }
+
+        .chart--design .chart__bar:nth-of-type(2) {
+            animation-delay: 5.4s;
+        }
+
+        .chart--design .chart__bar:nth-of-type(1) {
+            animation-delay: 5.2s;
+        }
+
+        .chart__label {
+            padding-left: 10px;
+            line-height: 30px;
+            font-weight: bolder;
+        }
+
+        @keyframes anim-lightspeed-in {
+            0% {
+                transform: translateX(-200%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
-<body class="bg-neutral-900 text-white">
-
-<nav class="bg-neutral-800 p-3 font-mono font-semibold text-xl flex flex-wrap items-center justify-between">
-    <div id="menu" class="w-full md:flex md:items-center md:justify-around">
+<body class="bg-white text-black dark:bg-neutral-900 dark:text-white">
+<nav class="bg-emerald-700 dark:bg-neutral-800 p-3 font-mono font-semibold text-xl flex flex-wrap items-center justify-between">
+    <div class="w-full md:flex md:items-center md:justify-around" id="menu">
         <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2 hidden lg:block">
-            <a href="#hero" class="block text-emerald-400 md:inline-block md:mx-2">👋🏻 Welcoming Hero</a>
+            <a class="block text-white dark:text-emerald-400 md:inline-block md:mx-2" href="#hero">👋🏻 Welcoming</a>
         </div>
         <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2 hidden lg:block">
-            <a href="#my_work" class="block text-emerald-400 md:inline-block md:mx-2">🤌🏻 Code Maestro</a>
+            <a class="block text-white dark:text-emerald-400 md:inline-block md:mx-2" href="#my_work">🔥 Experience</a>
         </div>
         <div class="text-center md:text-left md:mb-0 sm:py-2 xs:py-2 hidden lg:block">
-            <a href="#my_opensource" class="block text-emerald-400 md:inline-block md:mx-2">🚀 Github Rockstar!</a>
+            <a class="block text-white dark:text-emerald-400 md:inline-block md:mx-2" href="#my_opensource">
+                🚀 Open-source projects
+            </a>
         </div>
-        <div class="lg:flex justify-center md:justify-start sm:py-2 xs:py-2 md:flex flex">
-            <a href="https://github.com/ilmedova" class="text-emerald-400 mx-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <div class="lg:flex justify-center md:justify-start sm:py-2 xs:py-2 md:flex flex items-center">
+            <a class="text-white dark:text-emerald-400 mx-3" href="https://github.com/ilmedova">
+                <svg class="bi bi-github" fill="currentColor" height="30" viewBox="0 0 16 16" width="30"
+                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
             </a>
-            <a href="https://linkedin.com/in/mahri-ilmedova" class="text-emerald-400 mx-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <a class="text-white dark:text-emerald-400 mx-3" href="https://linkedin.com/in/mahri-ilmedova">
+                <svg class="bi bi-linkedin" fill="currentColor" height="30" viewBox="0 0 16 16"
+                     width="30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                 </svg>
             </a>
-            <a href="mailto:ilmedovamahri2@gmail.com" class="text-emerald-400 mx-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <a class="text-white dark:text-emerald-400 mx-3" href="mailto:ilmedovamahri2@gmail.com">
+                <svg class="bi bi-envelope-fill" fill="currentColor" height="30" viewBox="0 0 16 16"
+                     width="30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                 </svg>
             </a>
+            <div class="cursor-pointer p-2 rounded-full bg-emerald-600 dark:bg-neutral-700" id="btn">
+                <div id="sun">
+                    <svg class="h-6 w-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"/>
+                    </svg>
+                </div>
+                <!-- moon -->
+                <div id="moon">
+                    <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                    </svg>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
 
-<div id="hero" class="w-full container m-auto lg:py-2 md:py-6">
-    <div class="flex flex-wrap justify-center items-center">
-        <div class="w-full md:w-full lg:w-1/2 p-4 text-center lg:mt-0 mt-4">
-            <h1 class="lg:text-4xl font-bold sm:text-2xl text-2xl"><span class="lg:text-8xl md:text-4xl">🦸🏻‍♀️ </span>Hi! I'm Mahri Ilmedova</h1><br/>
-            <h1 class="lg:text-2xl font-bold text-emerald-400 space-y-4 sm:text-xl text-xl">
-                🤓 Software Engineer and Open-source Contributor <br/><br/>
-                🤌🏻 Code Maestro and Bug killer <br/><br/>
-                🔥 Energetic Collaborator and Github's Rockstar!<br/><br/>
+<div class="w-full container m-auto lg:py-2 md:py-6" id="hero">
+    <div class="flex flex-wrap justify-center items-center py-20">
+        <div class="w-full md:w-full lg:w-1/2 py-4 text-center lg:mt-0 mt-4">
+            <div class="m-auto"
+                 style="width: 200px; height: 200px; border-radius: 100%; background: url('./profile.jpeg'); background-position: center; background-size: 100%"></div>
+            <br/><br/>
+            <h1 class="lg:text-4xl font-bold sm:text-2xl text-2xl">🤓 Hi! I'm Mahri Ilmedova</h1><br/>
+            <h1 class="lg:text-xl font-bold text-emerald-600 dark:text-emerald-400 space-y-4 sm:text-xl text-xl">
+                Software Engineer, Energetic Collaborator <br/> and Open-source Developer <br/>
             </h1><br/><br/>
-            <a class="p-2 px-4 bg-emerald-500 text-white rounded text-xl font-semibold" href="./resume_mahri_ilmedova.pdf" target="_blank">
+            <a class="p-2 px-4 bg-emerald-600 text-white rounded text-xl font-semibold" href="./resume_ilmedova.pdf"
+               target="_blank">
                 Download resume
             </a>
         </div>
-        <div class="relative w-full md:w-full lg:w-1/2 sm:p-4 sm:mt-12">
-            <div id="container"></div>
+        <div class="relative w-full md:w-full lg:w-1/2 sm:p-4 sm:mt-12 pt-20">
+            <div class="skills">
+                <div class="charts">
+                    <div class="chart chart--dev">
+                        <span class="chart__title">Experienced in</span>
+                        <ul class="chart--horiz">
+                            <li class="chart__bar" style="width: 100%;">
+                              <span class="chart__label">
+                                PHP
+                              </span>
+                                <span class="float-right p-1">5+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 95%;">
+                              <span class="chart__label">
+                                Python
+                              </span>
+                                <span class="float-right p-1">4 years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 100%;">
+                              <span class="chart__label">
+                                JavaScript
+                              </span>
+                                <span class="float-right p-1">5+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 100%;">
+                              <span class="chart__label">
+                                SQL
+                              </span>
+                                <span class="float-right p-1">5+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 100%;">
+                              <span class="chart__label">
+                                HTML, CSS
+                              </span>
+                                <span class="float-right p-1">5+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 100%;">
+                              <span class="chart__label">
+                                Laravel
+                              </span>
+                                <span class="float-right p-1">5 years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 90%;">
+                              <span class="chart__label">
+                                Flask
+                              </span>
+                                <span class="float-right p-1">3+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 90%;">
+                              <span class="chart__label">
+                                NodeJS
+                              </span>
+                                <span class="float-right p-1">3+ years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 90%;">
+                              <span class="chart__label">
+                                ReactJS
+                              </span>
+                                <span class="float-right p-1">5 years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 100%;">
+                                <span class="chart__label">
+                                  Git, Github
+                                </span>
+                                <span class="float-right p-1">5 years</span>
+                            </li>
+                            <li class="chart__bar" style="width: 85%;">
+                                <span class="chart__label">
+                                  LangChain, LLMs, Pandas, NumPy
+                                </span>
+                                <span class="float-right p-1">1 year</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="my_work" class="container mx-auto py-8 px-4 md:py-16">
+<div class="container mx-auto py-8 px-4 md:py-16" id="my_work">
     <h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-12">👩🏻‍💻 Professional Experience</h1>
-    <h1 class="text-xl md:text-2xl font-bold text-center md:text-end mb-6 md:mb-12 text-red-400">Click on [+] 👇🏻 to read in detail</h1>
+    <h1 class="text-xl md:text-2xl font-bold text-center md:text-end mb-6 md:mb-12 text-red-400">Click on [+] 👇🏻 to read
+        in detail</h1>
 
     <div class="accordion flex flex-col items-center justify-center text-base md:text-xl">
         <!-- Panel 1 -->
         <div class="w-full md:w-3/4">
-            <input type="checkbox" name="panel" id="panel-1" class="hidden">
-            <label for="panel-1" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Senior Software Engineer <a class="text-blue-500" href="https://ogd-solutions.com/">@ OGD Solutions</a></label>
-            <div class="accordion__content overflow-hidden text-white bg-neutral-800 border-b border-neutral-700">
+            <input class="hidden" id="panel-1" name="panel" type="checkbox">
+            <label class="relative block dark:text-white p-4 shadow shadow-lg border-b border-emerald-500 dark:border-neutral-700 dark:bg-neutral-800 font-semibold"
+                   for="panel-1">
+                Senior Software Engineer <a class="text-blue-500" href="https://ogd-solutions.com/">@ OGD Solutions</a>
+            </label>
+            <div class="accordion__content overflow-hidden dark:text-white dark:bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Feb 2023 - Aug 2023 | Tallin, Estonia (Remote)
                 </h2>
@@ -137,11 +387,13 @@
                 <ul class="pb-4 px-6">
                     <li>
                         • Maintained complex technology infrastructure and collaborated with cross-functional teams to
-                        implement new features and strategically plan for future products, leading to streamlined workflows and
+                        implement new features and strategically plan for future products, leading to streamlined
+                        workflows and
                         a 20% improvement in development efficiency.
                     </li>
                     <li>
-                        • Implemented Agile methodologies in building and delivering a scalable dating platform with real-time
+                        • Implemented Agile methodologies in building and delivering a scalable dating platform with
+                        real-time
                         chat system, serving 1 million users, using PHP and Web Sockets.
                     </li>
                     <li>
@@ -149,32 +401,42 @@
                         conversational models increasing user engagement by 85%.
                     </li>
                     <li>
-                        • Created advanced queries to visualize important data for the data analysis team, achieving profit
+                        • Created advanced queries to visualize important data for the data analysis team, achieving
+                        profit
                         increase by 54% from the visualized insights.
                     </li>
                 </ul>
                 <div class="pb-4 px-6 flex flex-wrap">
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Pandas</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">LangChain</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python
+                    </div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Pandas
+                    </div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">LangChain
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">
+                        JavaScript
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker
+                    </div>
                 </div>
                 </p>
             </div>
         </div>
         <!-- Panel 2 -->
         <div class="w-full md:w-3/4 mt-4 md:mt-8">
-            <input type="checkbox" name="panel" id="panel-2" class="hidden">
-            <label for="panel-2" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Full Stack Software Engineer <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS Advertising Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
+            <input class="hidden" id="panel-2" name="panel" type="checkbox">
+            <label class="relative block dark:text-white p-4 shadow shadow-lg border-b border-emerald-500 dark:border-neutral-700 dark:bg-neutral-800 font-semibold"
+                   for="panel-2">Full
+                Stack Software Engineer <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS Advertising
+                    Agency</a></label>
+            <div class="accordion__content overflow-hidden dark:text-white dark:bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Aug 2019 - Feb 2023 | Ashgabat, Turkmenistan (On-site)
                 </h2>
@@ -196,27 +458,36 @@
                 </ul>
                 <div class="pb-4 px-6 flex flex-wrap">
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Python
+                    </div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">
+                        JavaScript
+                    </div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">AWS</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Docker
+                    </div>
                 </div>
                 </p>
             </div>
         </div>
         <!-- Panel 3 -->
         <div class="w-full md:w-3/4 mt-4 md:mt-8">
-            <input type="checkbox" name="panel" id="panel-3" class="hidden">
-            <label for="panel-3" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Junior Full Stack Engineer - Intern <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS Advertising Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
+            <input class="hidden" id="panel-3" name="panel" type="checkbox">
+            <label class="relative block dark:text-white p-4 shadow shadow-lg border-b border-emerald-500 dark:border-neutral-700 dark:bg-neutral-800 font-semibold"
+                   for="panel-3">Junior
+                Full Stack Engineer - Intern <a class="text-blue-500" href="https://tpsadvertising.com/en">@ TPS
+                    Advertising Agency</a></label>
+            <div class="accordion__content overflow-hidden dark:text-white dark:bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Apr 2018 - Aug 2019 | Ashgabat, Turkmenistan (On-site)
                 </h2>
@@ -224,27 +495,33 @@
                 <ul class="pb-4 px-6">
                     <li>
                         • Automated data retrieval processes using Python, Selenium, and BeautifulSoup, streamlining the
-                        collection of product information and reviews in e-commerce app resulting in 100% of data accuracy.
+                        collection of product information and reviews in e-commerce app resulting in 100% of data
+                        accuracy.
                     </li>
                     <li>
                         • Spearheaded the successful design and implementation of scalable e-commerce solutions
                         incorporating PHP and Laravel framework, enhancing the website performance by 25%.
                     </li>
                     <li>
-                        • Orchestrated successful migration of 3 legacy code to Laravel applications, delivered production-ready
+                        • Orchestrated successful migration of 3 legacy code to Laravel applications, delivered
+                        production-ready
                         solutions that increased project completion rate by 30%.
                     </li>
                 </ul>
                 <div class="pb-4 px-6 flex flex-wrap">
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">
+                        JavaScript
+                    </div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">ReactJS
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
                 </div>
@@ -253,9 +530,13 @@
         </div>
         <!-- Panel 4 -->
         <div class="w-full md:w-3/4 mt-4 md:mt-8">
-            <input type="checkbox" name="panel" id="panel-4" class="hidden">
-            <label for="panel-4" class="relative block bg-black text-white p-4 shadow border-b border-neutral-700 bg-neutral-800 font-semibold">Junior Full Stack Web Developer - Intern <a class="text-blue-500" href="https://www.instagram.com/idealhyzmat/">@ Ide-al Digital Agency</a></label>
-            <div class="accordion__content overflow-hidden bg-neutral-800 border-b border-neutral-700">
+            <input class="hidden" id="panel-4" name="panel" type="checkbox">
+            <label class="relative block dark:text-white p-4 shadow shadow-lg border-b border-emerald-500 dark:border-neutral-700 dark:bg-neutral-800 font-semibold"
+                   for="panel-4">Junior
+                Full Stack Web Developer - Intern <a class="text-blue-500"
+                                                     href="https://www.instagram.com/idealhyzmat/">@ Ide-al Digital
+                    Agency</a></label>
+            <div class="accordion__content overflow-hidden dark:text-white dark:bg-neutral-800 border-b border-neutral-700">
                 <h2 class="accordion__header pt-4 pl-4 font-semibold text-emerald-400">
                     Sep 2017 - Apr 2018 | Ashgabat, Turkmenistan (On-site)
                 </h2>
@@ -269,19 +550,23 @@
                         achieving a 30% website performance increase and 20% user engagement improvement.
                     </li>
                     <li>
-                        • Successfully migrated 2 legacy applications from .NET to Laravel, enhancing flexibility, performance,
+                        • Successfully migrated 2 legacy applications from .NET to Laravel, enhancing flexibility,
+                        performance,
                         and maintainability.
                     </li>
                 </ul>
                 <div class="pb-4 px-6 flex flex-wrap">
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">PHP</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">C#</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Laravel
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Flask</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">SQL</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">HTML</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">CSS</div>
-                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">JavaScript</div>
+                    <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">
+                        JavaScript
+                    </div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Git</div>
                     <div class="p-1 text-sm font-semibold px-3 bg-green-200 text-green-800 rounded-full m-1">Linux</div>
                 </div>
@@ -292,106 +577,149 @@
 </div>
 
 
-<div id="my_opensource" class="container mx-auto py-16 px-4" style="background: url('./bg.png') no-repeat; background-size: 60%; background-position: bottom">
-    <h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-12">🚀 Welcome to my gallery of open-source projects</h1>
+<div class="container mx-auto py-16 px-4" id="my_opensource"
+     style="background: url('./bg.png') no-repeat; background-size: 60%; background-position: bottom">
+    <h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-12">🚀 Welcome to my gallery of open-source
+        projects</h1>
 
     <a href="https://github.com/ilmedova" target="_blank">
-        <img class="w-75 lg:w-75 m-auto" src="https://github-widgetbox.vercel.app/api/profile?username=ilmedova&data=followers,repositories,stars,commits&theme=carbon">
+        <img class="w-75 lg:w-75 m-auto"
+             src="https://github-widgetbox.vercel.app/api/profile?username=ilmedova&data=followers,repositories,stars,commits&theme=carbon">
     </a>
 
-    <div class="flex flex-wrap justify-center mt-8">
+    <div class="flex flex-wrap justify-center mt-8 pb-56">
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/chattle" alt="Chattle Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Chattle Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/chattle">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">Chattle - php composer package for Laravel projects, to enable projects instant customer support chat system using WebSockets</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">Chattle - php composer package for Laravel projects,
+                        to enable projects instant customer support chat system using WebSockets
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/chattle">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/ml-fun" alt="ML Fun Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="ML Fun Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/ml-fun">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">Project contains a collection of Machine Learning and AI projects in computer vision, data science, and more (Academic project)</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">Project contains a collection of Machine Learning and
+                        AI projects in computer vision, data science, and more (Academic project)
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/ml-fun" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/ml-fun">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/llama3_chatbot" alt="Llama3 Chatbot Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Llama3 Chatbot Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/llama3_chatbot">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">An AI chatbot using Python, LangChain, LLMs, Llama3 model, and Streamlit (Academic project)</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">An AI chatbot using Python, LangChain, LLMs, Llama3
+                        model, and Streamlit (Academic project)
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/llama3_chatbot" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/llama3_chatbot">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/modem-sms-sender" alt="Modem SMS Sender Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Modem SMS Sender Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/modem-sms-sender">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">Sending SMS using modem by connecting to the websocket channels and listening for events</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">Sending SMS using modem by connecting to the
+                        websocket channels and listening for events
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/chattle">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/langchain_projects" alt="LangChain Projects">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="LangChain Projects"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/langchain_projects">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">LangChain, LLMs (OpenAI, LLama, Bert, Gemini) problems and interview questions</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">LangChain, LLMs (OpenAI, LLama, Bert, Gemini)
+                        problems and interview questions
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/chattle">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/docusaurus" alt="Docusaurus Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Docusaurus Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/docusaurus">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">This project was forked from Facebook. I implemented new features for the project to make my own contribution to open-source communities</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">This project was forked from Facebook. I implemented
+                        new features for the project to make my own contribution to open-source communities
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/ml-fun" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/ml-fun">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/leetcode" alt="Leetcode Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Leetcode Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/leetcode">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">Collection of solutions that I implemented for Leetcode problems. Project doesn't contain all the problems solved</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">Collection of solutions that I implemented for
+                        Leetcode problems. Project doesn't contain all the problems solved
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/llama3_chatbot" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/llama3_chatbot">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
         </div>
 
         <div class="w-full md:w-1/2 lg:w-1/4 p-4">
-            <div class="rounded overflow-hidden shadow-lg bg-neutral-800 flex flex-col h-full">
-                <img class="w-full" src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/scraper" alt="Scraper Project">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-neutral-800 flex flex-col h-full">
+                <img alt="Scraper Project"
+                     class="w-full"
+                     src="https://opengraph.githubassets.com/79d984ef4a5f2d7b3d43366f75686a07d70207464743c3b00b7456cbeb537851/ilmedova/scraper">
                 <div class="px-6 py-4 flex-grow">
-                    <div class="font-bold text-lg md:text-xl mb-2">Basic scraping of the links from the webpage and saving them in csv file</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">Basic scraping of the links from the webpage and
+                        saving them in csv file
+                    </div>
                 </div>
-                <a href="https://github.com/ilmedova/chattle" class="bg-neutral-700 text-emerald-400 font-bold py-2 px-4 rounded-b inline-flex items-center">
+                <a class="dark:bg-neutral-700 dark:text-emerald-400 text-white bg-emerald-600 font-bold py-2 px-4 rounded-b inline-flex items-center"
+                   href="https://github.com/ilmedova/chattle">
                     <span class="text-lg md:text-xl">Go to repository →</span>
                 </a>
             </div>
@@ -401,132 +729,51 @@
 </div>
 
 <script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-    });
-</script>
-
-<script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
-      }
+    tailwind.config = {
+        darkMode: 'class', /* 'class' or 'media', we use 'class' to enable dark mode manually */
     }
 </script>
-<script type="module">
-    import * as THREE from 'three';
-    import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
-    import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
-    const container = document.getElementById('container');
+<script>
+    const app = document.querySelector("html");
+    const btn = document.querySelector("#btn");
+    const sunIcon = document.querySelector("#sun");
+    const moonIcon = document.querySelector("#moon");
 
-    const scene = new THREE.Scene();
-    const dotScene = new THREE.Scene(); // Separate scene for dots
+    const currentTheme = localStorage.getItem('theme');
 
-    const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 1, 10000);
-    camera.position.z = 3000;
-
-    const cssRenderer = new CSS3DRenderer();
-    cssRenderer.setSize(container.clientWidth, container.clientHeight);
-    container.appendChild(cssRenderer.domElement);
-
-    const webglRenderer = new THREE.WebGLRenderer({ alpha: true });
-    webglRenderer.setSize(container.clientWidth, container.clientHeight);
-    webglRenderer.domElement.style.position = 'absolute';
-    webglRenderer.domElement.style.top = 0;
-    container.appendChild(webglRenderer.domElement);
-
-    const controls = new TrackballControls(camera, webglRenderer.domElement);
-    controls.minDistance = 500;
-    controls.maxDistance = 6000;
-
-    const labels = ['HTML', 'Pandas', 'Numpy', 'CSS', 'JavaScript', 'Java', 'AWS', 'Git', 'Linux', 'SQL', 'LangChain', 'PHP', 'SQL', 'Flask', 'Laravel', 'Python', 'Tailwind', 'Bootstrap', 'ThreeJS', 'ReactJS'];
-
-    let radius = Math.min(container.clientWidth, container.clientHeight) / 1; // Adjust radius based on container size
-
-    const labelObjects = [];
-
-    for (let i = 0; i < labels.length; i++) {
-        const label = labels[i];
-        const element = document.createElement('div');
-        element.className = 'label';
-        element.textContent = label;
-
-        const object = new CSS3DObject(element);
-
-        const phi = Math.acos(-1 + (2 * i) / labels.length);
-        const theta = Math.sqrt(labels.length * Math.PI) * phi;
-
-        object.position.x = radius * Math.cos(theta) * Math.sin(phi);
-        object.position.y = radius * Math.sin(theta) * Math.sin(phi);
-        object.position.z = radius * Math.cos(phi);
-
-        scene.add(object);
-        labelObjects.push(object);
+    if (currentTheme === 'dark') {
+        sunIcon.style.display = "block";
+        moonIcon.style.display = "none";
+        app.classList.remove('light');
+        app.classList.add('dark');
+    } else {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "block";
+        app.classList.remove('dark');
+        app.classList.add('light');
     }
 
-    // Create dots between all labels
-    const dotMaterial = new THREE.PointsMaterial({ color: 0x34d399, size: 5 });
-
-    for (let i = 0; i < labelObjects.length; i++) {
-        for (let j = i + 1; j < labelObjects.length; j++) {
-            const start = labelObjects[i].position;
-            const end = labelObjects[j].position;
-            const dotCount = 20;
-            const points = [];
-
-            for (let k = 0; k <= dotCount; k++) {
-                const t = k / dotCount;
-                const x = start.x + t * (end.x - start.x);
-                const y = start.y + t * (end.y - start.y);
-                const z = start.z + t * (end.z - start.z);
-                points.push(new THREE.Vector3(x, y, z));
-            }
-
-            const dotGeometry = new THREE.BufferGeometry().setFromPoints(points);
-            const dots = new THREE.Points(dotGeometry, dotMaterial);
-            dotScene.add(dots);
+    btn.addEventListener("click", () => {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
         }
-    }
-
-    function animate() {
-        requestAnimationFrame(animate);
-
-        // Automatically rotate the scene
-        scene.rotation.y += 0.0005; // Adjust the rotation speed as needed
-
-        //controls.update();
-        cssRenderer.render(scene, camera);
-        webglRenderer.render(dotScene, camera);
-    }
-
-    window.addEventListener('resize', () => {
-        const width = container.clientWidth;
-        const height = container.clientHeight;
-
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-
-        cssRenderer.setSize(width, height);
-        webglRenderer.setSize(width, height);
-
-        radius = Math.min(width, height) / 1; // Recalculate radius based on new container size
-
-        // Update label positions
-        for (let i = 0; i < labels.length; i++) {
-            const object = labelObjects[i];
-            const phi = Math.acos(-1 + (2 * i) / labels.length);
-            const theta = Math.sqrt(labels.length * Math.PI) * phi;
-
-            object.position.x = radius * Math.cos(theta) * Math.sin(phi);
-            object.position.y = radius * Math.sin(theta) * Math.sin(phi);
-            object.position.z = radius * Math.cos(phi);
+        if (app.classList.contains('dark')) {
+            app.classList.remove('dark');
+            app.classList.add('light');
+            localStorage.setItem('theme', 'light');
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "block";
+        } else {
+            app.classList.remove('light');
+            app.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            sunIcon.style.display = "block";
+            moonIcon.style.display = "none";
         }
     });
-
-    animate();
 </script>
 
 </body>
